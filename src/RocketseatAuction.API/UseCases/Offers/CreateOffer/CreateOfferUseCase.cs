@@ -1,18 +1,17 @@
 ﻿using RocketseatAuction.API.Communication.Requests;
 using RocketseatAuction.API.Contracts;
 using RocketseatAuction.API.Entities;
-using RocketseatAuction.API.Repositories;
 using RocketseatAuction.API.Services;
 
 namespace RocketseatAuction.API.UseCases.Offers.CreateOffer;
 
 public class CreateOfferUseCase
 {
-    private readonly LoggedUser _loggedUser;
+    private readonly ILoggedUser _loggedUser;
     private readonly IOfferRepository _offerRepository;
 
     public CreateOfferUseCase(
-        LoggedUser loggedUser, 
+        ILoggedUser loggedUser, 
         IOfferRepository offerRepository)
     {
         _loggedUser = loggedUser;
